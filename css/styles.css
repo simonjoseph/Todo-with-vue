@@ -1,0 +1,223 @@
+/*? main styles  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #5D00A5;
+}
+
+body {
+    font-weight: 400;
+    background-color: #0f0714;
+    color: #fff;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 89vh;
+    border: 10px solid #5D00A5;
+    margin: 50px;
+    border-radius: 50px;
+}
+
+/*? ========== Todos ============== */
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 4px;
+    width: 500px;
+    min-height: 100px;
+    border: 2px solid #5D00A5;
+}
+
+.todos .text {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.todos .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+}
+
+.meta button {
+    font-size: 1.5rem;
+    padding: 4px 4px 2px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.meta button:hover {
+    background: #B573FF;
+    color: whitesmoke;
+}
+
+.todo-date {
+    flex-grow: 5;
+    opacity: 0.5;
+}
+
+.todo-list {
+    width: 560px;
+}
+
+/*? ========== Add Todo ============== */
+.add-todo {
+    display: flex;
+    position: relative;
+    width: 540px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-todo .form {
+    display: flex;
+    align-items: center;
+    border: 3px solid #707070;
+    border-radius: 10px;
+    padding: 5px;
+    max-height: 70px;
+}
+
+.add-todo .form input {
+    outline: none;
+    border: none;
+    background: none;
+    width: 434px;
+    line-height: 2;
+    font-size: 1.5rem;
+
+}
+
+.add-todo .form button {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    padding-top: 6px;
+    color: #707070;
+    transition: all 0.3s ease;
+}
+
+.add-todo .form button:hover {
+    background: #B573FF;
+    color: whitesmoke;
+}
+
+/*? ========== Add Todo ============== */
+.date-picker {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1), 1px 2px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #B573FF;
+    border-radius: 8px;
+    max-width: 400px;
+    min-width: 250px;
+    transition: all 0.2s;
+    padding: 5px;
+}
+
+.datepick {
+    font-size: 1.7rem;
+    color: #707070;
+    height: 40px;
+    cursor: pointer;
+}
+
+.purple {
+    color: #B573FF;
+}
+
+.error {
+    color: #5D00A5;
+    font-size: 1.2rem;
+}
+
+/*? ========== Sidbare ============== */
+.sidebar {
+    position: absolute;
+    left: -355px;
+    top: 0;
+    width: 350px;
+    min-height: 100vh;
+    background: #000000;
+    padding: 8px;
+    border-right: 2px solid #5D00A5;
+    color: white;
+    transition: all 0.3s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h1 {
+    text-align: center;
+}
+
+.filter-todos ul {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 10px auto;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.filter-todos ul li:hover {
+    cursor: pointer;
+}
+
+.filter-todos .active {
+    color: #B573FF;
+}
+
+.sidebar-list ul {
+    width: 100%;
+}
+
+.sidebar-list ul li {
+    width: 100%;
+}
+
+.toggle-sidebar {
+    position: absolute;
+    top: 50%;
+    left: 349px;
+    font-size: 1.7rem;
+    width: 40px;
+    height: 80px;
+    border: 2px solid #5D00A5;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px 0px 0px;
+}
+
+.sidebar-list .meta button {
+    color: white;
+}
+
+.display-sidebar {
+    left: 0;
+}

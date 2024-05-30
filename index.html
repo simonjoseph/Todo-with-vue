@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Todo - list</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="app" id="app">
+        <h1 class="title">TODO LIST</h1>
+        <div class="add-todo">
+
+            <div class="form">
+                <!-- <div class=""> -->
+                    <input id="textTodo" v-model="textTodo" type="text" placeholder="To Do..." />
+                <button type="submit" @click="addTodo">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <!-- </div> -->
+            </div>
+
+            <div class="calendar">
+                <div class="datepick purple">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+            </div>
+            
+        </div>
+
+        <ul>
+            <div>
+                <li v-for="todo in todos" class="todos">
+                    <div class="text completed">
+                    <h3>{{todo.name}}</h3>
+                    </div>
+                    <div class="meta">
+                        <p class="todo-date">2000-10-10</p>
+                        <button > <i class="fa-solid fa-check"></i> </button>
+                        <button > <i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </li>
+            </div>
+        </ul>
+
+        
+    <div class="sidebar display-sidebar">
+        <div class="filter-todos">
+            <ul>
+                <li class="active">All</li>
+                <li>Completed</li>
+                <li>Uncompleted</li>
+            </ul>
+        </div>
+        <div class="sidebar-list">
+        <ul>
+            <div>
+                <li class="todos">
+                    <div class="text completed">
+                    <h3>testo</h3>
+                    </div>
+                    <div class="meta">
+                        <p class="todo-date">2000-10-10</p>
+                        <button > <i class="fa-solid fa-check"></i> </button>
+                        <button > <i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </li>
+            </div>
+        </ul>
+        </div>
+        <button @click="displaySidebar" class="toggle-sidebar">
+            <i class="fa-solid fa-terminal"></i>
+        </button>
+    </div>
+
+    </div>
+
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+    
+</body>
+
+</html>
