@@ -1,9 +1,24 @@
+:root {
+    --bg: #000000;
+    --color: #fff;
+    --icon-color: whitesmoke;
+    --icon-hover: #5D00A5;
+}
+
+.ligth-theme {
+    --bg: #ffffff;
+    --color: #000;
+    --icon-color: #5D00A5;
+    --icon-hover: whitesmoke;
+}
+
 /*? main styles  */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: sans-serif;
 }
 
 button {
@@ -16,8 +31,8 @@ button {
 
 body {
     font-weight: 400;
-    background-color: #0f0714;
-    color: #fff;
+    background-color: var(--bg);
+    color: var(--color);
 }
 
 .app {
@@ -32,6 +47,12 @@ body {
     border-radius: 50px;
 }
 
+#textTodo {
+    color: var(--color);
+
+    padding-left: 10px;
+}
+
 /*? ========== Todos ============== */
 
 .todos {
@@ -39,7 +60,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: 8px 10px;
     border-radius: 10px;
     margin-top: 15px;
     margin-left: 4px;
@@ -72,8 +93,8 @@ body {
 }
 
 .meta button:hover {
-    background: #B573FF;
-    color: whitesmoke;
+    background: var(--icon-color);
+    color: var(--icon-hover);
 }
 
 .todo-date {
@@ -165,10 +186,10 @@ body {
     top: 0;
     width: 350px;
     min-height: 100vh;
-    background: #000000;
+    background: var(--bg);
     padding: 8px;
     border-right: 2px solid #5D00A5;
-    color: white;
+    color: var(--color);
     transition: all 0.3s;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -183,6 +204,9 @@ body {
     width: 80%;
     margin: 10px auto;
     border-bottom: 1px solid rgb(255, 255, 255);
+
+    padding-bottom: 10px;
+    padding-top: 60px;
 }
 
 .filter-todos ul li:hover {
@@ -220,4 +244,41 @@ body {
 
 .display-sidebar {
     left: 0;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.theme {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    font-size: 1.7rem;
+    /* width: 40px;
+    height: 80px; */
+    border: 1px solid #5D00A5;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 10px;
+}
+
+.theme-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme-flex button {
+    font-size: 1rem;
+    color: #707070;
+}
+
+.theme-flex button:first-child {
+    margin-right: 50px;
+}
+
+.theme-flex.active {
+    color: #fff;
 }
